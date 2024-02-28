@@ -67,6 +67,7 @@ header .logo img:hover {
     gap: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    transition: var(--trans-1);
 }
 
 .navlist .link {
@@ -93,14 +94,53 @@ header .logo img:hover {
     transition: var(--trans-2);
 }
 
+.navlist .drop i{
+    transition: var(--trans-1);
+}
+
+.navlist .drop:hover i{
+    transform: rotate(180deg);
+    transition: var(--trans-1);
+}
+
+.navlist .drop .dropdown li{
+    display: block;
+}
+
+.navlist .drop .dropdown{
+    width: 300px;
+    background: #242424ab;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding: 10px;
+    transition: var(--trans-1);
+    animation: dropdownHide 0.3s ease-in-out;
+}
+
+.navlist .drop .dropdown li a{
+    color: var(--text-color);
+    transition: var(--trans-1);
+}
+
+.navlist .drop .dropdown li a:hover{
+    color: #9322fd;
+    transform: translateX(-2px);
+    transition: var(--trans-1);
+}
+
+.navlist li.drop:hover ul.dropdown{
+    display: block;
+    transition: var(--trans-1);
+}
+
 .navlist .download {
-    background: rgb(52, 42, 105);
-    background: linear-gradient(45deg, #7c55dc 0%, #342a69 100%);
+    background: var(--main-color);
     color: var(--text-color);
     border-radius: 5px;
     border: 1px solid transparent;
     padding: 10px 30px;
-    margin-left: 50px;
+    margin-left: 30px;
     transition: var(--trans-1);
 }
 
@@ -146,7 +186,7 @@ header .logo img:hover {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(30%);
+    filter: brightness(20%);
 }
 
 .content {
@@ -175,9 +215,9 @@ header .logo img:hover {
     text-decoration: none;
     border: 1px solid transparent;
     border-radius: 5px;
+    text-align: center;
     transition: var(--trans-1);
 }
-
 .content .text a:hover {
     background-color: transparent;
     border: var(--border-hover);
@@ -256,18 +296,18 @@ header .logo img:hover {
     transition: var(--trans-1);
 }
 
-.updates {
+.news {
     height: 100vh;
     background: linear-gradient(90deg, #7c55dc 20%, #4e2177 80%);
 }
 
-.updates .text h2 {
+.news .text h2 {
     text-align: center;
     font-size: var(--h2-font);
     color: var(--text-color);
 }
 
-.updates .container .rows {
+.news .container .rows {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     align-items: center;
@@ -277,7 +317,7 @@ header .logo img:hover {
     margin-left: 5%;
 }
 
-.updates .container .rows .row {
+.news .container .rows .row {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -286,44 +326,77 @@ header .logo img:hover {
     box-shadow: 0px 0px 10px 0px var(--bg-color);
 }
 
-.updates .container .rows .row:hover{
+.news .container .rows .row:hover{
     transform: translateY(-10px);
     transition: var(--trans-1);
     box-shadow: 0px 10px 15px 0px var(--bg-color);
 }
 
-.updates .container .rows .row img {
+.news .container .rows .row img {
     width: 100%;
     display: block;
     transition: all .50s ease;
 }
 
 
-.updates .container .rows .row .info .description {
+.news .container .rows .row .info .description {
     font-weight: lighter;
     color: var(--bg-color);
     margin: 10px 0px 5px 5%;
 }
 
-.updates .container .rows .row .info .description span{
+.news .container .rows .row .info .description span{
     color: var(--main-color);
     font-weight: 600;
 }
 
-.updates .container .rows .row .info h3 {
+.news .container .rows .row .info h3 {
     color: var(--bg-color);
     font-size: 1.5rem;
     margin: 10px 0px 5px 5%;
 }
 
-.updates .container .rows .row .info p {
+.news .container .rows .row .info p {
     color: var(--bg-color);
     margin: 10px 0px 50px 5%;
 }
 
-.updates .container .rows .row .info a{
+.news .container .rows .row .info a{
     color: var(--text-color);
     background: var(--main-color);
     padding: 10px 30px;
     margin: 10px 0px 50px 5%;
+}
+
+
+
+/* Adicione isso ao final do seu arquivo CSS */
+
+.navlist .drop:hover .dropdown {
+    display: block;
+    animation: dropdownAnimation 0.3s ease-in-out;
+}
+
+@keyframes dropdownAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropdownHide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 }

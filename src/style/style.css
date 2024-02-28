@@ -391,12 +391,12 @@ header .logo img:hover {
     transition: var(--trans-1);
 }
 
-.news .container .button a:hover{
+.news .container .button a:hover {
     border: 1px solid var(--text-color);
     background: none;
     color: var(--text-color);
     transition: var(--trans-1);
-}   
+}
 
 /* Adicione isso ao final do seu arquivo CSS */
 

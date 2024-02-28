@@ -94,20 +94,20 @@ header .logo img:hover {
     transition: var(--trans-2);
 }
 
-.navlist .drop i{
+.navlist .drop i {
     transition: var(--trans-1);
 }
 
-.navlist .drop:hover i{
+.navlist .drop:hover i {
     transform: rotate(180deg);
     transition: var(--trans-1);
 }
 
-.navlist .drop .dropdown li{
+.navlist .drop .dropdown li {
     display: block;
 }
 
-.navlist .drop .dropdown{
+.navlist .drop .dropdown {
     width: 300px;
     background: #242424ab;
     position: absolute;
@@ -118,18 +118,18 @@ header .logo img:hover {
     animation: dropdownHide 0.3s ease-in-out;
 }
 
-.navlist .drop .dropdown li a{
+.navlist .drop .dropdown li a {
     color: var(--text-color);
     transition: var(--trans-1);
 }
 
-.navlist .drop .dropdown li a:hover{
+.navlist .drop .dropdown li a:hover {
     color: #9322fd;
     transform: translateX(-2px);
     transition: var(--trans-1);
 }
 
-.navlist li.drop:hover ul.dropdown{
+.navlist li.drop:hover ul.dropdown {
     display: block;
     transition: var(--trans-1);
 }
@@ -218,6 +218,7 @@ header .logo img:hover {
     text-align: center;
     transition: var(--trans-1);
 }
+
 .content .text a:hover {
     background-color: transparent;
     border: var(--border-hover);
@@ -326,7 +327,7 @@ header .logo img:hover {
     box-shadow: 0px 0px 10px 0px var(--bg-color);
 }
 
-.news .container .rows .row:hover{
+.news .container .rows .row:hover {
     transform: translateY(-10px);
     transition: var(--trans-1);
     box-shadow: 0px 10px 15px 0px var(--bg-color);
@@ -345,7 +346,7 @@ header .logo img:hover {
     margin: 10px 0px 5px 5%;
 }
 
-.news .container .rows .row .info .description span{
+.news .container .rows .row .info .description span {
     color: var(--main-color);
     font-weight: 600;
 }
@@ -361,14 +362,41 @@ header .logo img:hover {
     margin: 10px 0px 50px 5%;
 }
 
-.news .container .rows .row .info a{
+.news .container .rows .row .info a {
     color: var(--text-color);
     background: var(--main-color);
     padding: 10px 30px;
     margin: 10px 0px 50px 5%;
 }
 
+.news .container .button {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.news .container .button a {
+    margin-top: 30px;
+
+    color: var(--main-color);
+    background: var(--text-color);
+    padding: 10px 30px;
+    font-weight: 600;
+
+    width: 15%;
+    height: auto;
+    border: 1px solid transparent;
+    transition: var(--trans-1);
+}
+
+.news .container .button a:hover{
+    border: 1px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    transition: var(--trans-1);
+}   
 
 /* Adicione isso ao final do seu arquivo CSS */
 

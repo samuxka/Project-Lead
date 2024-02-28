@@ -4,16 +4,17 @@
     --bg-color: #242424;
     --text-color: #fdfdfd;
     --main-color: #8400ff;
+    --second-text-color: #b4b4b4;
     --card-bg: #fff;
 
     --big-font: 5rem;
     --h2-font: 3rem;
     --p-font: 1.1rem;
 
-    --trans-1: all .50s ease;
+    --trans-1: all 0.50s ease;
     --trans-2: transform 0.2s linear;
 
-    --border-hover: 1px solid var(--main-color);
+    --border-hover: 2px solid var(--main-color);
 }
 
 * {
@@ -298,7 +299,7 @@ header .logo img:hover {
 }
 
 .news {
-    height: 100vh;
+    height: 110vh;
     background: linear-gradient(90deg, #7c55dc 20%, #4e2177 80%);
 }
 
@@ -336,9 +337,8 @@ header .logo img:hover {
 .news .container .rows .row img {
     width: 100%;
     display: block;
-    transition: all .50s ease;
+    transition: all 0.50s ease;
 }
-
 
 .news .container .rows .row .info .description {
     font-weight: lighter;
@@ -379,12 +379,10 @@ header .logo img:hover {
 
 .news .container .button a {
     margin-top: 30px;
-
     color: var(--main-color);
     background: var(--text-color);
     padding: 10px 30px;
     font-weight: 600;
-
     width: 15%;
     height: auto;
     border: 1px solid transparent;
@@ -392,13 +390,240 @@ header .logo img:hover {
 }
 
 .news .container .button a:hover {
-    border: 1px solid var(--text-color);
+    border: 2px solid var(--text-color);
     background: none;
     color: var(--text-color);
     transition: var(--trans-1);
 }
 
-/* Adicione isso ao final do seu arquivo CSS */
+.image {
+    height: 100vh;
+    background-image: url('img/imagebg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 700px;
+}
+
+.image .container h2 {
+    color: var(--text-color);
+    font-size: var(--h2-font);
+    letter-spacing: 5px;
+}
+
+.image .container p {
+    color: var(--second-text-color);
+    font-size: var(--p-font);
+    margin-bottom: 30px;
+}
+
+.image .container a {
+    padding: 20px 50px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    transition: var(--trans-1);
+}
+
+.image .container a:hover {
+    background: transparent;
+    color: var(--main-color);
+    border: var(--border-hover);
+    transform: scale(1.1);
+    transition: var(--trans-1);
+}
+
+.newsletter {
+    height: 100vh;
+    background-image: linear-gradient(to right top, #5f12a6, #5e20a8, #5d2aa9, #5d32aa, #5d3aab, #683eb4, #7441bd, #8045c6, #9d43d8, #bc3ce7, #dd2ef4, #ff00ff);
+}
+
+.newsletter .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsletter .container .text {
+    margin: 5%;
+}
+
+.newsletter .container .text h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.newsletter .container .text p {
+    color: #d1d1d1;
+    font-weight: 600;
+}
+
+.newsletter .container .form {
+    margin: 5%;
+}
+
+.newsletter .container .form input::placeholder {
+    color: var(--text-color);
+}
+
+.newsletter .container .form .name {
+    border: 2px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.newsletter .container .form .inputd {
+    margin-bottom: 20px;
+}
+
+.newsletter .container .form .inputd input {
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    outline: none;
+}
+
+.newsletter .container .form .inputd .email {
+    width: 53%;
+    margin-right: 5px;
+}
+
+.newsletter .container .form .inputd .date {
+    width: 45%;
+}
+
+.newsletter .container .rest .acept {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.newsletter .container .rest .acept p {
+    color: var(--second-text-color);
+    margin-bottom: 20px;
+}
+
+.newsletter .container .rest input {
+    background: var(--text-color);
+    border: 2px solid transparent;
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 20px 50px;
+    outline: none;
+    transition: var(--trans-1);
+    cursor: pointer;
+}
+
+.newsletter .container .rest input:hover {
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+    transition: var(--trans-1);
+}
+
+.end {
+    height: 15vh;
+}
+
+.end .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.end .top .nav ul li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.end .top .nav ul li a {
+    color: var(--text-color);
+    transition: var(--trans-1);
+}
+
+.end .top .nav ul li a:hover {
+    color: var(--main-color);
+    transition: var(--trans-1);
+}
+
+.end .top .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.end .top .social h3 {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.end .top .social ul {
+    display: inline-flex;
+}
+
+.end .top .social ul li {
+    margin-right: 10px;
+}
+
+.end .top .social ul li a {
+    color: var(--text-color);
+    font-size: 15px;
+    transition: var(--trans-1);
+}
+
+.end .top .social ul li a:hover {
+    color: var(--main-color);
+    font-size: 17px;
+    transition: var(--trans-1);
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background: var(--bg-color);
+}
+
+footer p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+footer p a {
+    color: var(--main-color);
+    font-weight: 600;
+}
 
 .navlist .drop:hover .dropdown {
     display: block;

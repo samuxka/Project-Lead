@@ -276,10 +276,6 @@ header .logo img:hover {
     margin-bottom: 50px;
 }
 
-.about .container .text .link {
-    display: inline-flex;
-    gap: 20px;
-}
 
 .about .container .text a {
     color: var(--text-color);
@@ -309,7 +305,7 @@ header .logo img:hover {
     font-size: var(--h2-font);
     color: var(--text-color);
 }
-
+     
 .news .container .rows {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
